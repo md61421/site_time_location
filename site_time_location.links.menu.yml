@@ -1,0 +1,6 @@
+site_time_location.admin_config:
+  title: 'Site Time Location Settings'
+  description: 'Configure the site location and current time settings.'
+  parent: system.admin_config_system
+  route_name: site_time_location.settings
+  weight: 100

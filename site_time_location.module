@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * Site Time Location module.
+ *
+ * This module provides a block to display the site location and current time
+ * based on the configured timezone.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function site_time_location_theme($existing, $type, $theme, $path) {
+  return [
+    'time_location_block' => [
+      'variables' => [
+        'country' => NULL,
+        'city' => NULL,
+        'current_time' => NULL,
+      ],
+      'template' => 'time-location-block',
+      'path' => drupal_get_path('module', 'site_time_location') . '/templates',
+    ],
+  ];
+}

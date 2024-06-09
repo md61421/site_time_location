@@ -1,0 +1,8 @@
+services:
+  cache_context.time:
+    class: Drupal\site_time_location\Cache\Context\TimeCacheContext
+    tags:
+      - { name: cache.context, context: 'time' }
+
+  site_time_location.time_service:
+    class: Drupal\site_time_location\Service\TimeService

@@ -1,0 +1,7 @@
+name: 'Site Time Location'
+type: module
+description: 'Displays the site location and the current time based on the selected time zone.'
+package: Custom
+core_version_requirement: ^8 || ^9
+dependencies:
+  - drupal:block
