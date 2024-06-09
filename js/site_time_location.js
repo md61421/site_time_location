@@ -7,7 +7,8 @@
           const now = new Date();
           const timeString = now.toLocaleTimeString('en-US', { timeZone: timezone });
           const dateString = now.toLocaleDateString('en-US', { timeZone: timezone });
-          $('#current-time').text(timeString + ' ' + dateString);
+          $('#time').text(timeString);
+          $('#date').text(dateString);
         }
   
         updateTime();

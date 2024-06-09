@@ -25,7 +25,7 @@ class TimeCacheContext implements CacheContextInterface {
    */
   public function getContext() {
     // Return the current time formatted to second precision.
-    return (new DrupalDateTime())->format('Y-m-d H:i:s');
+    return (new DrupalDateTime())->format('H:i:s d-m-Y');
   }
 
   /**
