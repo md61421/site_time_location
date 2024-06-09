@@ -1,0 +1,8 @@
+update_time:
+  version: 1.x
+  js:
+    js/site_time_location.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings

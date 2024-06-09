@@ -73,17 +73,29 @@ class TimeLocationBlock extends BlockBase implements ContainerFactoryPluginInter
     $country = $config->get('country');
     $city = $config->get('city');
     $timezone = $config->get('timezone');
-    $current_time = $this->timeService->getCurrentTime($timezone);
 
-    return [
+    // Pass the timezone to JavaScript
+    $build = [
       '#theme' => 'time_location_block',
       '#country' => $country,
       '#city' => $city,
-      '#current_time' => $current_time,
+      '#timezone' => $timezone,
+      '#attached' => [
+        'library' => [
+          'site_time_location/update_time',
+        ],
+        'drupalSettings' => [
+          'siteTimeLocation' => [
+            'timezone' => $timezone,
+          ],
+        ],
+      ],
       '#cache' => [
         'contexts' => ['time'],
       ],
     ];
+
+    return $build;
   }
 
 }

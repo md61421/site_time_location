@@ -23,7 +23,7 @@ class TimeService {
     }
     
     $date = new DateTime('now', new DateTimeZone($timezone));
-    return $date->format('H:i d-m-Y');
+    return $date->format('H:i:s d-m-Y');
   }
 
 }
