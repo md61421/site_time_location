@@ -4,7 +4,7 @@ The **Site Time Location** module displays the site location and the current tim
 
 ## Requirements
 
-- Drupal 8 or higher
+- Drupal 8 or 9
 
 ## Installation
 
